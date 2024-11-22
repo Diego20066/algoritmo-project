@@ -22,345 +22,426 @@ function calcularTotal() {
 }
 
 function verificarRespuesta1() {
-  const respuesta = document.querySelector('input[name="respuesta1"]:checked');
-  const resultado = document.getElementById('resultadoEjercicio1');
-  if (respuesta) {
-      if (respuesta.value === '3') {
-          resultado.textContent = 'Correcto';
-          resultado.style.color = 'green';
-      } else {
-          resultado.textContent = 'Incorrecto';
-          resultado.style.color = 'red';
-      }
+    const respuestaSeleccionada = document.querySelector('input[name="respuesta1"]:checked');
+    const resultadoDiv = document.getElementById('resultadoEjercicio1');
+    
+    if (!respuestaSeleccionada) {
+        resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+        resultadoDiv.style.color = 'orange';
+        return;
+    }
+
+    const respuestaCorrecta = '3';
+    
+    if (respuestaSeleccionada.value === respuestaCorrecta) {
+        resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+        resultadoDiv.style.color = 'green';
+    } else {
+        resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+        resultadoDiv.style.color = 'red';
+    }
+}
+
+function verificarRespuesta2() {
+    const respuestaSeleccionada = document.querySelector('input[name="respuesta2"]:checked');
+    const resultadoDiv = document.getElementById('resultadoEjercicio2');
+    
+    if (!respuestaSeleccionada) {
+        resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+        resultadoDiv.style.color = 'orange';
+        return;
+    }
+
+    const respuestaCorrecta = 'a';
+    
+    if (respuestaSeleccionada.value === respuestaCorrecta) {
+        resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+        resultadoDiv.style.color = 'green';
+    } else {
+        resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+        resultadoDiv.style.color = 'red';
+    }
+}
+
+
+function verificarRespuesta3() {
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta3"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio3');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
   } else {
-      resultado.textContent = 'Seleccione una respuesta.';
-      resultado.style.color = 'orange';
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
   }
 }
 
-  function verificarRespuesta2() {
-    const respuesta = document.querySelector('input[name="respuesta2"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio2');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+function verificarRespuesta4() {
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta4"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio4');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
   }
 
-  function verificarRespuesta3() {
-    const respuesta = document.querySelector('input[name="respuesta3"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio3');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaCorrecta = 'b';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
+}
+
+function verificarRespuesta5() {
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta5"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio5');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
   }
 
-  function verificarRespuesta4() {
-    const respuesta = document.querySelector('input[name="respuesta4"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio4');
-    if (respuesta) {
-        if (respuesta.value === 'b') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaCorrecta = 'c';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
+}
+
+function verificarRespuesta6() {
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta6"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio6');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
   }
 
-  function verificarRespuesta5() {
-    const respuesta = document.querySelector('input[name="respuesta5"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio5');
-    if (respuesta) {
-        if (respuesta.value === 'c') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
+}
+
+function verificarRespuesta7() {
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta7"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio7');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
   }
 
-  function verificarRespuesta6() {
-    const respuesta = document.querySelector('input[name="respuesta6"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio6');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaCorrecta = 'b';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
   }
-
-  function verificarRespuesta7() {
-    const respuesta = document.querySelector('input[name="respuesta7"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio7');
-    if (respuesta) {
-        if (respuesta.value === 'b') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
-  }
+}
 
 function verificarRespuesta8() {
-  const respuesta = document.querySelector('input[name="respuesta8"]:checked');
-  const resultado = document.getElementById('resultadoEjercicio8');
-  if (respuesta) {
-      if (respuesta.value === 'a') {
-          resultado.textContent = 'Correcto';
-          resultado.style.color = 'green';
-      } else {
-          resultado.textContent = 'Incorrecto';
-          resultado.style.color = 'red';
-      }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta8"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio8');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
   } else {
-      resultado.textContent = 'Seleccione una respuesta.';
-      resultado.style.color = 'orange';
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
   }
 }
 
 function verificarRespuesta9() {
-  const respuesta = document.querySelector('input[name="respuesta9"]:checked');
-  const resultado = document.getElementById('resultadoEjercicio9');
-  if (respuesta) {
-      if (respuesta.value === 'a') {
-          resultado.textContent = 'Correcto';
-          resultado.style.color = 'green';
-      } else {
-          resultado.textContent = 'Incorrecto';
-          resultado.style.color = 'red';
-      }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta9"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio9');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
   } else {
-      resultado.textContent = 'Seleccione una respuesta.';
-      resultado.style.color = 'orange';
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
   }
 }
 
 function verificarRespuesta10() {
-  const respuesta = document.querySelector('input[name="respuesta10"]:checked');
-  const resultado = document.getElementById('resultadoEjercicio10');
-  if (respuesta) {
-      if (respuesta.value === 'd') {
-          resultado.textContent = 'Correcto';
-          resultado.style.color = 'green';
-      } else {
-          resultado.textContent = 'Incorrecto';
-          resultado.style.color = 'red';
-      }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta10"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio10');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'd';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
   } else {
-      resultado.textContent = 'Seleccione una respuesta.';
-      resultado.style.color = 'orange';
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
   }
 }
 
 function verificarRespuesta11() {
-    const respuesta = document.querySelector('input[name="respuesta11"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio11');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta11"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio11');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta12() {
-    const respuesta = document.querySelector('input[name="respuesta12"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio12');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta12"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio12');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta13() {
-    const respuesta = document.querySelector('input[name="respuesta13"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio13');
-    if (respuesta) {
-        if (respuesta.value === 'c') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta13"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio13');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'c';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta14() {
-    const respuesta = document.querySelector('input[name="respuesta14"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio14');
-    if (respuesta) {
-        if (respuesta.value === 'b') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta14"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio14');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'b';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta15() {
-    const respuesta = document.querySelector('input[name="respuesta15"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio15');
-    if (respuesta) {
-        if (respuesta.value === 'c') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta15"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio15');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'c';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
+
 function verificarRespuesta16() {
-    const respuesta = document.querySelector('input[name="respuesta16"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio16');
-    if (respuesta) {
-        if (respuesta.value === 'b') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta16"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio16');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'b';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta17() {
-    const respuesta = document.querySelector('input[name="respuesta17"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio17');
-    if (respuesta) {
-        if (respuesta.value === 'b') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta17"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio17');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'b';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta18() {
-    const respuesta = document.querySelector('input[name="respuesta18"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio18');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta18"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio18');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta19() {
-    const respuesta = document.querySelector('input[name="respuesta19"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio19');
-    if (respuesta) {
-        if (respuesta.value === 'a') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta19"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio19');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
+
+  const respuestaCorrecta = 'a';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
 }
 
 function verificarRespuesta20() {
-    const respuesta = document.querySelector('input[name="respuesta20"]:checked');
-    const resultado = document.getElementById('resultadoEjercicio20');
-    if (respuesta) {
-        if (respuesta.value === 'c') {
-            resultado.textContent = 'Correcto';
-            resultado.style.color = 'green';
-        } else {
-            resultado.textContent = 'Incorrecto';
-            resultado.style.color = 'red';
-        }
-    } else {
-        resultado.textContent = 'Seleccione una respuesta.';
-        resultado.style.color = 'orange';
-    }
-}
+  const respuestaSeleccionada = document.querySelector('input[name="respuesta20"]:checked');
+  const resultadoDiv = document.getElementById('resultadoEjercicio20');
+  
+  if (!respuestaSeleccionada) {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Seleccione una respuesta.</p>';
+      resultadoDiv.style.color = 'orange';
+      return;
+  }
 
+  const respuestaCorrecta = 'c';
+  
+  if (respuestaSeleccionada.value === respuestaCorrecta) {
+      resultadoDiv.innerHTML = '<p class="respuesta-correcta">Correcto</p>';
+      resultadoDiv.style.color = 'green';
+  } else {
+      resultadoDiv.innerHTML = '<p class="respuesta-incorrecta">Incorrecto</p>';
+      resultadoDiv.style.color = 'red';
+  }
+}
 function verificarRespuesta21() {
     const respuestaSeleccionada = document.querySelector('input[name="respuesta21"]:checked');
     const resultadoDiv = document.getElementById('resultadoEjercicio21');
