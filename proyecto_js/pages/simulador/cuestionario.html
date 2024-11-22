@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta de Programación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        h2 {
+            color: #ff6347;
+            text-shadow: 2px 2px #ffa07a;
+            animation: bounce 2s infinite;
+        }
+        pre {
+            background-color: #ffebcd;
+            border: 2px solid #ffa07a;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            color: #2f4f4f;
+        }
+        .form-check {
+            text-align: left;
+        }
+        .form-check-label {
+            font-weight: bold;
+            color: #4682b4;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .form-check-label:hover {
+            transform: scale(1.05);
+        }
+        button {
+            background-color: #32cd32;
+            border: none;
+            font-size: 1.2rem;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #228b22;
+        }
+        .respuesta-correcta {
+            color: #32cd32;
+        }
+        .respuesta-incorrecta {
+            color: #dc143c;
+        }
+        .form-check-input:checked {
+            background-color: #ff4500 !important; /* Naranja brillante */
+            border-color: #ff4500 !important;
+        }
+        .form-check-input {
+            border: 2px solid #ff8c00;
+        }
+        .form-check-input:hover {
+            border-color: #ff6347;
+        }
+        .resultado {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-2">
+  <h2 class="text-center">🤓 Verificar si un número es Par o Impar 🤓</h2>
+  <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+      function esPar(x) {
+      1. let r = ""
+      2. if (x % 2 == 0) {
+      3.   r = " Es Impar"
+      4. } else {
+      5.   r = " Es Par"
+      6. }
+      7. console.log(r)
+      }</pre>
+
+  <h4 class="text-center text-primary-emphasis">¿Cuál línea hace que el algoritmo no funcione correctamente?</h4>
+  <form id="formularioPregunta1" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+      <div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta1" id="opcion1a" value="1">
+              <label class="form-check-label" for="opcion1a">a) Línea 1</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta1" id="opcion1b" value="5">
+              <label class="form-check-label" for="opcion1b">b) Línea 5</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta1" id="opcion1c" value="3">
+              <label class="form-check-label" for="opcion1c">c) Línea 3</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta1" id="opcion1d" value="6">
+              <label class="form-check-label" for="opcion1d">d) Línea 6</label>
+          </div>
+          <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta1()">Aceptar</button>
+          <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+      </div>
+      <div id="resultadoEjercicio1" class="resultado ms-5 h4"></div>
+  </form>
+</div>
+
+<div class="container mt-2">
+  <h2 class="text-center">Analice el diagrama de flujo</h2>
+  <div class="text-center">
+      <img src="../../img/ejercicio1.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+  </div>
+  <form id="formularioPregunta2"action="./simulador.html" class="d-flex align-items-center justify-content-center">
+      <div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta2" id="opcion2a" value="a">
+              <label class="form-check-label" for="opcion2a">a) Diagrama de flujo que presenta el número mayor</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta2" id="opcion2b" value="b">
+              <label class="form-check-label" for="opcion2b">b) Diagrama de flujo que presenta el número menor</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta2" id="opcion2c" value="c">
+              <label class="form-check-label" for="opcion2c">c) Diagrama de flujo que presenta el número mayor y menor</label>
+          </div>
+          <div class="form-check mb-1 d-flex align-items-center">
+              <input class="form-check-input me-2" type="radio" name="respuesta2" id="opcion2d" value="d">
+              <label class="form-check-label" for="opcion2d">d) Diagrama de flujo que presenta el número menor y mayor</label>
+          </div>
+          <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta2()">Aceptar</button>
+          <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+      </div>
+      <div id="resultadoEjercicio2" class="resultado ms-5 h4"></div>
+  </form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la principal diferencia entre una estructura condicional simple y una estructura condicional compuesta?</h2>
+    <div class="text-center">
+    </div>
+    <form id="formularioPregunta3" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta3" id="opcion3a" value="a">
+                <label class="form-check-label" for="opcion3a">a) Una estructura condicional compuesta combina múltiples condiciones mediante operadores lógicos, mientras que una condicional simple evalúa solo una condición</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta3" id="opcion3b" value="b">
+                <label class="form-check-label" for="opcion3b">b) La estructura condicional compuesta es siempre más eficiente que la simple.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta3" id="opcion3c" value="c">
+                <label class="form-check-label" for="opcion3c">c) Una estructura condicional simple puede tener más de dos condiciones, mientras que la compuesta solo tiene una.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta3" id="opcion3d" value="d">
+                <label class="form-check-label" for="opcion3d">d) No hay diferencias significativas entre ambas estructuras.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta3()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio3" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">Al analizar un problema, ¿por qué es importante definir claramente la entrada y la
+        salida esperada?</h2>
+    <div class="text-center">
+    </div>
+    <form id="formularioPregunta4" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta4" id="opcion4a" value="a">
+                <label class="form-check-label" for="opcion4a">a)  Para garantizar que el programa sea compatible con múltiples plataformas.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta4" id="opcion4b" value="b">
+                <label class="form-check-label" for="opcion4b">b) Para asegurar que el programa cumpla con sus objetivos.
+                </label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta4" id="opcion4c" value="c">
+                <label class="form-check-label" for="opcion4c">c) Para evitar la escritura de pseudocódigo.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta4" id="opcion4d" value="d">
+                <label class="form-check-label" for="opcion4d">d) Para reducir el tiempo de desarrollo.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta4()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio4" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">¿Qué se entiende por "mejora continua" en el contexto de desarrollo de software?</h2>
+    <div class="text-center">
+    </div>
+  <form id="formularioPregunta5" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+    <div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta5" id="opcion5a" value="a">
+            <label class="form-check-label" for="opcion5a">a)  Reestructurar el programa después de cada prueba.
+            </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta5" id="opcion5b" value="b">
+            <label class="form-check-label" for="opcion5b">b)  Añadir constantemente nuevas características al programa</label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta5" id="opcion5c" value="c">
+            <label class="form-check-label" for="opcion5c">c) Realizar ajustes y mejoras periódicas para optimizar el código y satisfacer mejor los requisitos </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta5" id="opcion5d" value="d">
+            <label class="form-check-label" for="opcion5d">d)Cambiar el lenguaje de programación regularmente.
+            </label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta5()">Aceptar</button>
+        <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+    </div>
+    <div id="resultadoEjercicio5" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">. Si tienes la función funcion valor=Suma(a, b) valor= a + b fin funcion, ¿qué hará si
+        la llamas como resultado=Suma(3, 7)? </h2>
+    <div class="text-center">
+    </div>
+  <form id="formularioPregunta6" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+    <div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta6" id="opcion6a" value="a">
+            <label class="form-check-label" for="opcion6a">a)   Asignará el valor 10 a resultado</label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta6" id="opcion6b" value="b">
+            <label class="form-check-label" for="opcion6b">b) Asignará el valor 0 a resultado
+            </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta6" id="opcion6c" value="c">
+            <label class="form-check-label" for="opcion6c">c) Generará un error
+            </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta6" id="opcion6d" value="d">
+            <label class="form-check-label" for="opcion6d">d) 15 </label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta6()">Aceptar</button>
+        <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+    </div>
+    <div id="resultadoEjercicio6" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la salida de esta función si llamamos a valor=Cuadrado(4)?
+        funcion valor=Cuadrado(a) valor= a * a fin funcion  </h2>
+    <div class="text-center">
+    </div>
+  <form id="formularioPregunta7" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+    <div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta7" id="opcion7a" value="a">
+            <label class="form-check-label" for="opcion7a">a) 8  </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta7" id="opcion7b" value="b">
+            <label class="form-check-label" for="opcion7b">b) 16 </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta7" id="opcion7c" value="c">
+            <label class="form-check-label" for="opcion7c">c) 12 </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta7" id="opcion7d" value="d">
+            <label class="form-check-label" for="opcion7d">d) 20 </label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta7()">Aceptar</button>
+        <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+    </div>
+    <div id="resultadoEjercicio7" class="resultado ms-5 h4"></div>
+</form>
+</div>
+<div class="container mt-2">
+    <h2 class="text-center">Analice el codigo y responda </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function fibonacci(n) {
+            let a = 0, b = 1, c;
+            if (n === 0) return a;
+            for (let i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            }
+            return b;
+            }
+            console.log(fibonacci(6));</pre>
+  
+    <div class="text-center">
+    </div>
+  <form id="formularioPregunta8" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+    <div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta8" id="opcion8a" value="a">
+            <label class="form-check-label" for="opcion8a">a) 8  </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta8" id="opcion8b" value="b">
+            <label class="form-check-label" for="opcion8b">b) 13 </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta8" id="opcion8c" value="c">
+            <label class="form-check-label" for="opcion8c">c) 5 </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta8" id="opcion8d" value="d">
+            <label class="form-check-label" for="opcion8d">d) 21 </label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta8()">Aceptar</button>
+        <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+    </div>
+    <div id="resultadoEjercicio8" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice el codigo y responda </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        12. function contarHastaCinco() {
+            for (let i = 1; i <= 5; i++) {
+            console.log(i);
+            }
+            }
+            contarHastaCinco();</pre>
+  
+    <div class="text-center">
+    </div>
+  <form id="formularioPregunta9" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+    <div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta9" id="opcion9a" value="a">
+            <label class="form-check-label" for="opcion9a">a) 1 2 3 4 5 </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta9" id="opcion9b" value="b">
+            <label class="form-check-label" for="opcion9b">b) 0 1 2 3 4 5  </label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta9" id="opcion9c" value="c">
+            <label class="form-check-label" for="opcion9c">c) 1 2 3 4 5 6</label>
+        </div>
+        <div class="form-check mb-1 d-flex align-items-center">
+            <input class="form-check-input me-2" type="radio" name="respuesta9" id="opcion9d" value="d">
+            <label class="form-check-label" for="opcion9d">d) 1 2 3 4 </label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta9()">Aceptar</button>
+        <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+    </div>
+    <div id="resultadoEjercicio9" class="resultado ms-5 h4"></div>
+</form>
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la función principal de los paréntesis en una expresión lógica que contiene
+        operadores AND y OR?
+         </h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta10" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta10" id="opcion10a" value="a">
+        <label class="form-check-label" for="opcion10a">a) Los paréntesis solo se utilizan en bucles, no en expresiones condicionales </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta10" id="opcion10b" value="b">
+        <label class="form-check-label" for="opcion10b">b) Los paréntesis se utilizan para simplificar la expresión lógica eliminando operadores
+            innecesarios </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta10" id="opcion10c" value="c">
+        <label class="form-check-label" for="opcion10c">c) Los paréntesis permiten que la expresión se evalúe más rápidamente.
+        </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta10" id="opcion10d" value="d">
+        <label class="form-check-label" for="opcion10d">d) Los paréntesis se utilizan para agrupar condiciones y establecer la prioridad en la evaluación
+            de la expresión.
+             </label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta10()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio10" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">. En un sistema de cálculo de horas trabajadas, si un empleado trabaja 8 horas
+        diarias durante 5 días, ¿cuántas horas en total trabajó en la semana?
+        </h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta11" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta11" id="opcion11a" value="a">
+        <label class="form-check-label" for="opcion11a">a) 40 horas </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta11" id="opcion11b" value="b">
+        <label class="form-check-label" for="opcion11b">b) 50 horas </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta11" id="opcion11c" value="c">
+        <label class="form-check-label" for="opcion11c">c) 45 horas </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta11" id="opcion11d" value="d">
+        <label class="form-check-label" for="opcion11d">d) 35 horas </label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta11()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio11" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice el pseudocódigo y responda</h2>
+    <div class="text-center">
+        <img src="../../img/ejercicio2.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+    </div>
+<div class="text-center">
+</div>
+<h4 class="text-center text-primary-emphasis">Indique la linea o lineas que hace el algoritmo no funcione correctamente</h4>
+<h4 class="text-center text-primary-emphasis">Seleccione una:</h4>
+<form id="formularioPregunta12" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta12" id="opcion12a" value="a">
+        <label class="form-check-label" for="opcion12a">a) 8 </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta12" id="opcion12b" value="b">
+        <label class="form-check-label" for="opcion12b">b) 10 </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta12" id="opcion12c" value="c">
+        <label class="form-check-label" for="opcion12c">c) 12  </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta12" id="opcion12d" value="d">
+        <label class="form-check-label" for="opcion12d">d) 11 </label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta12()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio12" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">En lógica de programación, ¿qué operador tiene mayor prioridad al evaluar una expresión condicional compleja?</h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta13" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta13" id="opcion13a" value="a">
+        <label class="form-check-label" for="opcion13a">a) OR  </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta13" id="opcion13b" value="b">
+        <label class="form-check-label" for="opcion13b">b) AND </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta13" id="opcion13c" value="c">
+        <label class="form-check-label" for="opcion13c">c) NOT </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta13" id="opcion13d" value="d">
+        <label class="form-check-label" for="opcion13d">d) XOR </label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta13()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio13" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Qué es una variable en programación?</h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta14" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta14" id="opcion14a" value="a">
+        <label class="form-check-label" for="opcion14a">a) Una constante que no cambia su valor en todo el programa</label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta14" id="opcion14b" value="b">
+        <label class="form-check-label" for="opcion14b">b) Un espacio en la memoria donde se almacena un valor que puede cambiar durante la
+            ejecución del programa </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta14" id="opcion14c" value="c">
+        <label class="form-check-label" for="opcion14c">c) Un bloque de código que se ejecuta varias veces dentro de un bucle.
+        </label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta14" id="opcion14d" value="d">
+        <label class="form-check-label" for="opcion14d">d) Una función que recibe parámetros y devuelve un valor.
+        </label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta14()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio14" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es el objetivo de la optimización de algoritmos?</h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta15" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta15" id="opcion15a" value="a">
+        <label class="form-check-label" for="opcion15a">a)Aumentar el número de pasos en un algoritmo para hacerlo más preciso. </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta15" id="opcion15b" value="b">
+        <label class="form-check-label" for="opcion15b">b) Eliminar todas las estructuras de control de un algoritmo.</label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta15" id="opcion15c" value="c">
+        <label class="form-check-label" for="opcion15c">c) Reducir el uso de recursos como tiempo de ejecución o espacio en memoria</label>
+    </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta15" id="opcion15d" value="d">
+        <label class="form-check-label" for="opcion15d">d) Evitar el uso de pseudocódigo en la descripción del algoritmo</label>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta15()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio15" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Si tienes la siguiente función: funcion valor=Cuadrado(a) valor= a * a fin funcion, ¿qué se
+        obtiene al llamarla con valor=Cuadrado(5)?</h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta16" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta16" id="opcion16a" value="a">
+        <label class="form-check-label" for="opcion16a">a) 10 </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta16" id="opcion16b" value="b">
+        <label class="form-check-label" for="opcion16b">b) 25 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta16" id="opcion16c" value="c">
+        <label class="form-check-label" for="opcion16c">c) 5</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta16" id="opcion16d" value="d">
+        <label class="form-check-label" for="opcion16d">d) 50</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta16()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio16" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la salida si llamamos a la función valor=Resta(10, 4)?
+        funcion valor=Resta(a, b) valor= a - b fin funcion </h2>
+</div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta17" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta17" id="opcion17a" value="a">
+        <label class="form-check-label" for="opcion17a">a) 10 </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta17" id="opcion17b" value="b">
+        <label class="form-check-label" for="opcion17b">b) 6 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta17" id="opcion17c" value="c">
+        <label class="form-check-label" for="opcion17c">c) 4</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta17" id="opcion17d" value="d">
+        <label class="form-check-label" for="opcion17d">d) 14</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta17()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio17" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice el codigo de  js en la imagen y seleccione según corresponda</h2>
+    <div class="text-center">
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function imprimirCuadrados(n) {
+            for (let i = 1; i <= n; i++) {
+            console.log(i * i);
+            }
+            }
+            imprimirCuadrados(3);
+            </pre>
+   </div>
+<div class="text-center">
+</div>
+<form id="formularioPregunta18" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta18" id="opcion18a" value="a">
+        <label class="form-check-label" for="opcion18a">a) Imprime el cuadrado de los números del 1 al 3. </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta18" id="opcion18b" value="b">
+        <label class="form-check-label" for="opcion18b">b) Imprime los números del 1 al 3. </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta18" id="opcion18c" value="c">
+        <label class="form-check-label" for="opcion18c">c) Imprime el cubo de los números del 1 al 3.
+        </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta18" id="opcion18d" value="d">
+        <label class="form-check-label" for="opcion18d">d) Imprime los números pares del 1 al 3.</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta18()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio18" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice el codigo de  js en la imagen y seleccione según corresponda</h2>
+    <div class="text-center">
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function contarRegresivamente(n) {
+            for (let i = n; i >= 1; i--) {
+            console.log(i);
+            }
+            }
+            contarRegresivamente(4);</pre>
+   </div>
+<form id="formularioPregunta19" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta19" id="opcion19a" value="a">
+        <label class="form-check-label" for="opcion19a">a) 4321  </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta19" id="opcion19b" value="b">
+        <label class="form-check-label" for="opcion19b">b) 1234 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta19" id="opcion19c" value="c">
+        <label class="form-check-label" for="opcion19c">c) 12345 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta19" id="opcion19d" value="d">
+        <label class="form-check-label" for="opcion19d">d) 54321</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta19()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio19" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál de las siguientes técnicas es fundamental para el desarrollo de un modelo
+        abstracto?
+        </h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta20" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta20" id="opcion20a" value="a">
+        <label class="form-check-label" for="opcion20a">a) Diseño visual.  </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta20" id="opcion20b" value="b">
+        <label class="form-check-label" for="opcion20b">b) Pruebas de estrés. </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta20" id="opcion20c" value="c">
+        <label class="form-check-label" for="opcion20c">c) Análisis de requerimientos. </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta20" id="opcion20d" value="d">
+        <label class="form-check-label" for="opcion20d">d) Compilación del código. </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta20()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio20" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">  ¿Qué sucede si no se respetan las prioridades entre operadores lógicos en una expresión
+        condicional? </h2>
+    <form id="formularioPregunta21" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta21" id="opcion21a" value="a">
+                <label class="form-check-label" for="opcion21a">a) La expresión puede evaluarse incorrectamente, dando resultados inesperados.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta21" id="opcion21b" value="b">
+                <label class="form-check-label" for="opcion21b">b)  La expresión fallará y causará un error de ejecución.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta21" id="opcion21c" value="c">
+                <label class="form-check-label" for="opcion21c">c)  La expresión siempre dará como resultado "falso" en lugar de "verdadero"</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta21" id="opcion21d" value="d">
+                <label class="form-check-label" for="opcion21d">d)  No afecta la evaluación, ya que los operadores tienen la misma prioridad</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta21()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio21" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center"> ¿Cuál de las siguientes afirmaciones es verdadera sobre el uso de operadores lógicos en
+        estructuras condicionales? </h2>
+    <form id="formularioPregunta22" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta22" id="opcion22a" value="a">
+                <label class="form-check-label" for="opcion22a">a) El operador AND devuelve verdadero si al menos una condición es verdadera.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta22" id="opcion22b" value="b">
+                <label class="form-check-label" for="opcion22b">b)  El operador NOT invierte el valor lógico de una condición.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta22" id="opcion22c" value="c">
+                <label class="form-check-label" for="opcion22c">c)  El operador XOR siempre devuelve verdadero si ambas condiciones son iguales.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta22" id="opcion22d" value="d">
+                <label class="form-check-label" for="opcion22d">d)  El operador OR devuelve verdadero solo si todas las condiciones son verdaderas.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta22()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio22" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Se necesita desarrollar una aplicación para matriculación en línea, de una
+        institución educativa. Tomando en cuenta algunas características particulares </h2>
+    <div class="text-center">
+        <img src="../../img/ejercicio8.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+    </div>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        Al costo total de la matrícula de un estudiante; se debe aplicar un impuesto de 15%
+        adicional del subtotal generado.
+        Casos a Resolver:
+        
+        x. El costo total de matrícula de un estudiante en período ordinario, quién ha seleccionado
+        1 materias presenciales, 2 materias a distancia y 4 talleres prácticos
+       
+        y. El costo total de matrícula de un estudiante en período extraordinario, quién ha
+        seleccionado 2 materias presenciales, 2 materias a distancia y 4 talleres prácticos.
+        
+        z. El costo total de matrícula de un estudiante en período especial, quién ha seleccionado 5
+        materias presenciales, 3 materias a distancia y 5 talleres prácticos.</pre>
+    <form id="formularioPregunta23" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta23" id="opcion23a" value="a">
+                <label class="form-check-label" for="opcion23a">a) x=2599, y=4163, z= 7705</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta23" id="opcion23b" value="b">
+                <label class="form-check-label" for="opcion23b">b) x=3000 y=4000, z= 7000</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta23" id="opcion23c" value="c">
+                <label class="form-check-label" for="opcion23c">c) x=2852, y=4404, z= 7348</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta23" id="opcion23d" value="d">
+                <label class="form-check-label" for="opcion23d">d) x=2700 y=4500, z= 7800</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta23()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio23" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center"> En un restaurante, cada plato tiene un costo de $12. Si un cliente pide 3 platos, ¿cuál será
+        el costo total de su pedido? </h2>
+    <form id="formularioPregunta24" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta24" id="opcion24a" value="a">
+                <label class="form-check-label" for="opcion24a">a) 48 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta24" id="opcion24b" value="b">
+                <label class="form-check-label" for="opcion24b">b)  36 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta24" id="opcion24c" value="c">
+                <label class="form-check-label" for="opcion24c">c)  24 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta24" id="opcion24d" value="d">
+                <label class="form-check-label" for="opcion24d">d)  30 dólares</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta24()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio24" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Si un estudiante debe cursar 3 materias en el semestre, y cada una requiere 4 horas de
+        estudio semanales, ¿cuántas horas en total necesitará estudiar en una semana? </h2>
+    <form id="formularioPregunta25" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta25" id="opcion25a" value="a">
+                <label class="form-check-label" for="opcion25a">a) 10 horas</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta25" id="opcion25b" value="b">
+                <label class="form-check-label" for="opcion25b">b)  12 horas</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta25" id="opcion25c" value="c">
+                <label class="form-check-label" for="opcion25c">c)  16 horas</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta25" id="opcion25d" value="d">
+                <label class="form-check-label" for="opcion25d">d)  8 horas</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta25()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio25" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  ¿Cuál de los siguientes NO es un tipo común de estructura de control en un algoritmo? </h2>
+    <form id="formularioPregunta26" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta26" id="opcion26a" value="a">
+                <label class="form-check-label" for="opcion26a">a) Secuencial</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta26" id="opcion26b" value="b">
+                <label class="form-check-label" for="opcion26b">b)  Ciclica(Bucles)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta26" id="opcion26c" value="c">
+                <label class="form-check-label" for="opcion26c">c)  Evaluación recursiva</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta26" id="opcion26d" value="d">
+                <label class="form-check-label" for="opcion26d">d)  Condicional</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta26()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio26" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  ¿Qué resultado produce esta función al llamarla con Multiplicacion(4, 5)?
+        funcion Multiplicacion(a, b) escribir a * b fin funcion </h2>
+    <form id="formularioPregunta27" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta27" id="opcion27a" value="a">
+                <label class="form-check-label" for="opcion27a">a) 10</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta27" id="opcion27b" value="b">
+                <label class="form-check-label" for="opcion27b">b)  20</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta27" id="opcion27c" value="c">
+                <label class="form-check-label" for="opcion27c">c)  25</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta27" id="opcion27d" value="d">
+                <label class="form-check-label" for="opcion27d">d)  40</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta27()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio27" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Seleccione una: </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function sumaImpares(n) {
+            let suma = 0;
+            for (let i = 1; i <= n; i += 2) {
+                suma += i;
+            }
+            return suma;
+            }</pre>
+    <form id="formularioPregunta28" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta28" id="opcion28a" value="a">
+                <label class="form-check-label" for="opcion28a">a) 9</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta28" id="opcion28b" value="b">
+                <label class="form-check-label" for="opcion28b">b)  15</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta28" id="opcion28c" value="c">
+                <label class="form-check-label" for="opcion28c">c)  10</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta28" id="opcion28d" value="d">
+                <label class="form-check-label" for="opcion28d">d)  6</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta28()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio28" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Seleccione una: </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function sumarPares(n) {
+            let suma = 0;
+            for (let i = 0; i <= n; i++) {
+                if (i % 2 === 0) {
+                suma += i;
+                }
+            }
+            return suma;
+            }</pre>
+    <form id="formularioPregunta29" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta29" id="opcion29a" value="a">
+                <label class="form-check-label" for="opcion29a">a) 30</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta29" id="opcion29b" value="b">
+                <label class="form-check-label" for="opcion29b">b)  25</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta29" id="opcion29c" value="c">
+                <label class="form-check-label" for="opcion29c">c)  20</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta29" id="opcion29d" value="d">
+                <label class="form-check-label" for="opcion29d">d)  35</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta29()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio29" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  ¿Qué operador lógico se utiliza para evaluar si dos o más condiciones son
+        verdaderas al mismo tiempo en una estructura condicional? </h2>
+    <form id="formularioPregunta30" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta30" id="opcion30a" value="a">
+                <label class="form-check-label" for="opcion30a">a) XOR</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta30" id="opcion30b" value="b">
+                <label class="form-check-label" for="opcion30b">b)  NOT</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta30" id="opcion30c" value="c">
+                <label class="form-check-label" for="opcion30c">c)  OR</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta30" id="opcion30d" value="d">
+                <label class="form-check-label" for="opcion30d">d)  AND</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta30()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio30" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  En una empresa de deliveries, cada entrega tiene un costo fijo de $10 y un costo
+        variable de $2 por cada kilómetro. ¿Cuál será el costo total de una entrega a 5 km de
+        distancia? </h2>
+    <form id="formularioPregunta31" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta31" id="opcion31a" value="a">
+                <label class="form-check-label" for="opcion31a">a) 12 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta31" id="opcion31b" value="b">
+                <label class="form-check-label" for="opcion31b">b)  20 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta31" id="opcion31c" value="c">
+                <label class="form-check-label" for="opcion31c">c)  25 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta31" id="opcion31d" value="d">
+                <label class="form-check-label" for="opcion31d">d)  10 dólares</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta31()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio31" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">   El siguiente algoritmo presenta la suma de los dígitos de cualquier numero entero </h2>
+    <div class="text-center">
+        <img src="../../img/ejercicio 11.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+    </div>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+         Indique la linea o lineas que hace el algoritmo no funcione correctamente
+    </pre>
+    <form id="formularioPregunta32" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta32" id="opcion32a" value="a">
+                <label class="form-check-label" for="opcion32a">a) 4</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta32" id="opcion32b" value="b">
+                <label class="form-check-label" for="opcion32b">b) 5</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta32" id="opcion32c" value="c">
+                <label class="form-check-label" for="opcion32c">c) 6,7</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta32" id="opcion32d" value="d">
+                <label class="form-check-label" for="opcion32d">d) 5,6</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta32()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio32" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  ¿Cuál es el propósito principal de la abstracción Entrada-Proceso-Salida en el desarrollo de
+        software? </h2>
+    <form id="formularioPregunta33" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta33" id="opcion33a" value="a">
+                <label class="form-check-label" for="opcion33a">a)  Reducir el número de pruebas necesarias.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta33" id="opcion33b" value="b">
+                <label class="form-check-label" for="opcion33b">b)  Dividir el problema en partes que puedan analizarse por separado.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta33" id="opcion33c" value="c">
+                <label class="form-check-label" for="opcion33c">c)  Crear el código necesario para la interfaz de usuario.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta33" id="opcion33d" value="d">
+                <label class="form-check-label" for="opcion33d">d)  Garantizar que el programa cumpla con las normativas legales</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta33()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio33" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">    ¿Qué se entiende por análisis de requerimientos en el contexto de la programación? </h2>
+    <form id="formularioPregunta34" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta34" id="opcion34a" value="a">
+                <label class="form-check-label" for="opcion34a">a)    Diseñar la estructura visual del software.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta34" id="opcion34b" value="b">
+                <label class="form-check-label" for="opcion34b">b)   Identificar y documentar qué necesita el programa para resolver un problema.
+                </label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta34" id="opcion34c" value="c">
+                <label class="form-check-label" for="opcion34c">c)   Probar todas las funcionalidades del software.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta34" id="opcion34d" value="d">
+                <label class="form-check-label" for="opcion34d">d)   Escribir el código necesario para el programa.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta34()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio34" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">   ¿Cuál es una ventaja de utilizar expresiones lógicas compuestas en una estructura
+        condicional? </h2>
+    <form id="formularioPregunta35" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta35" id="opcion35a" value="a">
+                <label class="form-check-label" for="opcion35a">a)   Permiten evaluar varias condiciones al mismo tiempo y tomar decisiones más complejas
+                    en el programa.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta35" id="opcion35b" value="b">
+                <label class="form-check-label" for="opcion35b">b)  Reducen la cantidad de código necesario al eliminar condiciones.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta35" id="opcion35c" value="c">
+                <label class="form-check-label" for="opcion35c">c)  Aseguran que el programa sea más rápido, ya que evalúan todas las condiciones a la vez.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta35" id="opcion35d" value="d">
+                <label class="form-check-label" for="opcion35d">d)   Evitan la necesidad de usar estructuras repetitivas como bucles.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta35()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio35" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+  
+  <div class="container mt-2">
+    <h2 class="text-center">    ¿Cuál de las siguientes afirmaciones sobre la complejidad algorítmica es correcta? </h2>
+    <form id="formularioPregunta36" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta36" id="opcion36a" value="a">
+                <label class="form-check-label" for="opcion36a">a)   La complejidad algorítmica siempre es constante sin importar el tamaño del problema.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta36" id="opcion36b" value="b">
+                <label class="form-check-label" for="opcion36b">b)  La complejidad algorítmica solo se refiere al número de líneas de código.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta36" id="opcion36c" value="c">
+                <label class="form-check-label" for="opcion36c">c)  La complejidad algorítmica solo aplica a algoritmos iterativos.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta36" id="opcion36d" value="d">
+                <label class="form-check-label" for="opcion36d">d)   La complejidad algorítmica mide los recursos computacionales (tiempo y espacio) que un
+                    algoritmo necesita para ejecutarse.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta36()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio36" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">     ¿Cómo se define una función que muestra un mensaje en la consola sin devolver un valor? </h2>
+    <form id="formularioPregunta37" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta37" id="opcion37a" value="a">
+                <label class="form-check-label" for="opcion37a">a)   funcion MostrarMensaje(mensaje)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta37" id="opcion37b" value="b">
+                <label class="form-check-label" for="opcion37b">b)   procedimiento MostrarMensaje(mensaje)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta37" id="opcion37c" value="c">
+                <label class="form-check-label" for="opcion37c">c)  funcion sin retorno MostrarMensaje(mensaje)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta37" id="opcion37d" value="d">
+                <label class="form-check-label" for="opcion37d">d)    subproceso MostrarMensaje(mensaje)</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta37()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio37" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">     ¿Qué palabra clave se utiliza para devolver un valor en una función con retorno en
+        PSeInt? </h2>
+    <form id="formularioPregunta38" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta38" id="opcion38a" value="a">
+                <label class="form-check-label" for="opcion38a">a)   devuelve</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta38" id="opcion38b" value="b">
+                <label class="form-check-label" for="opcion38b">b)   retorna</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta38" id="opcion38c" value="c">
+                <label class="form-check-label" for="opcion38c">c)  variable=</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta38" id="opcion38d" value="d">
+                <label class="form-check-label" for="opcion38d">d)    salir</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta38()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio38" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Seleccione una: </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function multiplicar(n) {
+            let resultado = 1;
+            for (let i = 1; i <= 10; i++) {
+            resultado *= n;
+            }
+            return resultado;
+            }</pre>
+    <form id="formularioPregunta39" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta39" id="opcion39a" value="a">
+                <label class="form-check-label" for="opcion39a">a) 9765625</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta39" id="opcion39b" value="b">
+                <label class="form-check-label" for="opcion39b">b)  50</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta39" id="opcion39c" value="c">
+                <label class="form-check-label" for="opcion39c">c)  500</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta39" id="opcion39d" value="d">
+                <label class="form-check-label" for="opcion39d">d)  5</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta39()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio39" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">     Un repartidor debe entregar un paquete en 3 diferentes ubicaciones. Si el tiempo promedio
+        de entrega en cada ubicación es de 15 minutos, ¿cuánto tiempo total le tomará hacer las
+        entregas? </h2>
+    <form id="formularioPregunta40" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta40" id="opcion40a" value="a">
+                <label class="form-check-label" for="opcion40a">a)   60 minutos</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta40" id="opcion40b" value="b">
+                <label class="form-check-label" for="opcio40b">b)   45 minutos</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta40" id="opcion40c" value="c">
+                <label class="form-check-label" for="opcion40c">c)  50 minutos</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta40" id="opcion40d" value="d">
+                <label class="form-check-label" for="opcion40d">d)    30 minutos</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta40()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio40" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">     ¿Cuál de las siguientes opciones describe un pseudocódigo? </h2>
+    <form id="formularioPregunta41" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta41" id="opcion41a" value="a">
+                <label class="form-check-label" for="opcion41a">a)   Un lenguaje de programación específico utilizado solo para el desarrollo web.
+                </label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta41" id="opcion41b" value="b">
+                <label class="form-check-label" for="opcio41b">b)   Una descripción estructurada y detallada de los pasos de un algoritmo</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta41" id="opcion41c" value="c">
+                <label class="form-check-label" for="opcion41c">c)   Un software usado para crear programas en diferentes lenguajes.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta41" id="opcion41d" value="d">
+                <label class="form-check-label" for="opcion41d">d)    Un diagrama de flujo simplificado que representa un algoritmo</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta41()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio41" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Dado el siguiente diagrama de flujo, siga la secuencia lógica de las instrucciones e
+        indique cuál de las siguientes salidas es la correcta respecto a todos los valores que van
+        tomando las variables: A, B, C. </h2>
+    <div class="text-center">
+        <img src="../../img/ejercicio 14.jpg" width="400" height="450" alt="Descripción de la imagen" class="my-3">
+    </div>
+    <form id="formularioPregunta42" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta42" id="opcion42a" value="a">
+                <label class="form-check-label" for="opcion42a">a)  3-4-15, 3-5-33, 3-6-54, 3-7-78</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta42" id="opcion42b" value="b">
+                <label class="form-check-label" for="opcion42b">b) 3-4-15, 4-5-33, 5-6-54, 6-7-70</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta42" id="opcion42c" value="c">
+                <label class="form-check-label" for="opcion42c">c) 3-4-15, 4-5-33, 5-6-54, 6-7-77</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta42" id="opcion42d" value="d">
+                <label class="form-check-label" for="opcion42d">d) 3-4-15, 3-5-33, 3-6-53, 3-7-77</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta42()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio42" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+  
+  <div class="container mt-2">
+    <h2 class="text-center">     ¿Cuál es la función principal de los paréntesis enuna expresión lógicaque contiene
+        operadores AND y OR? </h2>
+    <form id="formularioPregunta43" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta43" id="opcion43a" value="a">
+                <label class="form-check-label" for="opcion43a">a)   Los paréntesis solo se utilizan en bucles, no en expresiones condicionales.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta43" id="opcion43b" value="b">
+                <label class="form-check-label" for="opcio43b">b)   Los paréntesis se utilizan para simplificar la expresión lógica eliminando operadores
+                    innecesarios.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta43" id="opcion43c" value="c">
+                <label class="form-check-label" for="opcion43c">c)   Los paréntesis se utilizan para agrupar condiciones y establecer la prioridad en la
+                    evaluación de la expresión.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta43" id="opcion43d" value="d">
+                <label class="form-check-label" for="opcion43d">d)    Los paréntesis permiten que la expresión se evalúe más rápidamente.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta43()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio43" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">      ¿Qué significa que una variable tenga "ámbito local" en un programa? </h2>
+    <form id="formularioPregunta44" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta44" id="opcion44a" value="a">
+                <label class="form-check-label" for="opcion44a">a)   Que se utiliza como parámetro de entrada para una función.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta44" id="opcion44b" value="b">
+                <label class="form-check-label" for="opcio44b">b)   Que solo puede ser utilizada dentro de la función o bloque donde fue declarada.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta44" id="opcion44c" value="c">
+                <label class="form-check-label" for="opcion44c">c)   Que puede ser accedida desde cualquier parte del programa.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta44" id="opcion44d" value="d">
+                <label class="form-check-label" for="opcion44d">d)    Que mantiene su valor durante toda la ejecución del programa.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta44()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio44" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">       En la metodología de Entrada-Proceso-Salida (E-P-S), ¿qué describe mejor la fase de
+        "Proceso"? </h2>
+    <form id="formularioPregunta45" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta45" id="opcion45a" value="a">
+                <label class="form-check-label" for="opcion45a">a)   Almacenar temporalmente los datos.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta45" id="opcion45b" value="b">
+                <label class="form-check-label" for="opcio45b">b)   Presentar el resultado final al usuario.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta45" id="opcion45c" value="c">
+                <label class="form-check-label" for="opcion45c">c)  Realizar cálculos y transformar datos para obtener el resultado.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta45" id="opcion45d" value="d">
+                <label class="form-check-label" for="opcion45d">d)  Capturar datos de entrada</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta45()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio45" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Seleccione una: </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function verificarPrimo(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i < num; i++) {
+            if (num %i === 0) return false;
+            }
+            return true;
+            }
+            console.log(verificarPrimo(7));</pre>
+    <form id="formularioPregunta46" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta46" id="opcion46a" value="a">
+                <label class="form-check-label" for="opcion46a">a) true</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta46" id="opcion46b" value="b">
+                <label class="form-check-label" for="opcion46b">b)  false</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta46" id="opcion46c" value="c">
+                <label class="form-check-label" for="opcion46c">c)  undefined</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta46" id="opcion46d" value="d">
+                <label class="form-check-label" for="opcion46d">d)  error de ejecucion</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta46()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio46" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">        Una tienda ofrece un descuento del 20% en un producto cuyo precio original es de $50.
+ ¿Cuál será el precio final después del descuento? </h2>
+    <form id="formularioPregunta47" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta47" id="opcion47a" value="a">
+                <label class="form-check-label" for="opcion47a">a)   30 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta47" id="opcion47b" value="b">
+                <label class="form-check-label" for="opcio47b">b)   40 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta47" id="opcion47c" value="c">
+                <label class="form-check-label" for="opcion47c">c) 45 dólares</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta47" id="opcion47d" value="d">
+                <label class="form-check-label" for="opcion47d">d)  35 dólares</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta47()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio47" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">      ¿Qué se entiende por "corto circuito" en una evaluación de una expresión condicional
+        compuesta con operadores lógicos? </h2>
+    <form id="formularioPregunta48" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta48" id="opcion48a" value="a">
+                <label class="form-check-label" for="opcion48a">a)   Es cuando se combinan operadores lógicos AND y OR en una misma expresión.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta48" id="opcion48b" value="b">
+                <label class="form-check-label" for="opcio48b">b)   Es cuando la evaluación de una expresión condicional se detiene tan pronto como se
+                    determina el resultado, sin evaluar las demás condiciones.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta48" id="opcion48c" value="c">
+                <label class="form-check-label" for="opcion48c">c) Es una técnica para optimizar el tiempo de ejecución en bucles.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta48" id="opcion48d" value="d">
+                <label class="form-check-label" for="opcion48d">d)  Es el proceso de evaluar todas las condiciones en una expresión lógica
+                    independientemente del resultado de las primeras.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta48()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio48" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">     ¿Cuál es el propósito de un bucle en la programación? </h2>
+    <form id="formularioPregunta49" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta49" id="opcion49a" value="a">
+                <label class="form-check-label" for="opcion49a">a)   Romper la ejecución de un programa en varias partes.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta49" id="opcion49b" value="b">
+                <label class="form-check-label" for="opcio49b">b)   Repetir un conjunto de instrucciones hasta que se cumpla una condición.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta49" id="opcion49c" value="c">
+                <label class="form-check-label" for="opcion49c">c) Es una técnica para optimizar el tiempo de ejecución en bucles.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta49" id="opcion49d" value="d">
+                <label class="form-check-label" for="opcion49d">d)  Declarar una variable que puede ser utilizada en todo el programa.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta49()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio49" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">      ¿Qué técnica de abstracción es útil al dividir un problema en múltiples subproblemas para
+        su resolución en un programa? </h2>
+    <form id="formularioPregunta50" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta50" id="opcion50a" value="a">
+                <label class="form-check-label" for="opcion50a">a)   Implementación de un ciclo de repetición.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta50" id="opcion50b" value="b">
+                <label class="form-check-label" for="opcio50b">b)   Descomposición modular o "divide y vencerás".</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta50" id="opcion50c" value="c">
+                <label class="form-check-label" for="opcion50c">c) Creación de un modelo gráfico de alta precisión.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta50" id="opcion50d" value="d">
+                <label class="form-check-label" for="opcion50d">d)  Uso de diagramas de flujo detallados</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta50()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio50" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">      ¿Qué característica NO pertenece a los algoritmos? </h2>
+    <form id="formularioPregunta51" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta51" id="opcion51a" value="a">
+                <label class="form-check-label" for="opcion51a">a)   Debe producir un resultado.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta51" id="opcion51b" value="b">
+                <label class="form-check-label" for="opcio51b">b)   Debe tener pasos bien definidos.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta51" id="opcion51c" value="c">
+                <label class="form-check-label" for="opcion51c">c) Requiere múltiples lenguajes de programación para su implementación.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta51" id="opcion51d" value="d">
+                <label class="form-check-label" for="opcion51d">d)  Debe ser finito</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta51()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio51" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">      ¿Cuál es el principal objetivo de la depuración (debugging) en programación? </h2>
+    <form id="formularioPregunta52" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta52" id="opcion52a" value="a">
+                <label class="form-check-label" for="opcion52a">a)   Generar un informe detallado del rendimiento del programa.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta52" id="opcion52b" value="b">
+                <label class="form-check-label" for="opcio52b">b)   Escribir código más rápido y eficiente.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta52" id="opcion52c" value="c">
+                <label class="form-check-label" for="opcion52c">c) Identificar y corregir errores en el código fuente.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta52" id="opcion52d" value="d">
+                <label class="form-check-label" for="opcion52d">d)  Optimizar el rendimiento de un programa.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta52()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio52" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">       ¿Cuál es el propósito principal de una constante en un programa? </h2>
+    <form id="formularioPregunta53" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta53" id="opcion53a" value="a">
+                <label class="form-check-label" for="opcion53a">a)   Controlar el flujo de ejecución.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta53" id="opcion53b" value="b">
+                <label class="form-check-label" for="opcio53b">b)   Permitir valores modificables que cambian durante la ejecución.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta53" id="opcion53c" value="c">
+                <label class="form-check-label" for="opcion53c">c)  Proporcionar valores fijos que no cambian.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta53" id="opcion53d" value="d">
+                <label class="form-check-label" for="opcion53d">d)  Definir la estructura del programa.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta53()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio53" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">        ¿Qué es un pseudocódigo? </h2>
+    <form id="formularioPregunta54" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta54" id="opcion54a" value="a">
+                <label class="form-check-label" for="opcion54a">a)   Un lenguaje de programación que es interpretado por el compilador.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta54" id="opcion54b" value="b">
+                <label class="form-check-label" for="opcio54b">b)   Un diagrama que muestra el flujo de datos dentro de un sistema.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta54" id="opcion54c" value="c">
+                <label class="form-check-label" for="opcion54c">c)  Unarepresentación simplificada y estructurada de un algoritmo que utiliza un lenguaje intermedio entre el lenguaje humano y el lenguaje de programación.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta54" id="opcion54d" value="d">
+                <label class="form-check-label" for="opcion54d">d)  El código fuente final de un programa que puede ejecutarse directamente en una máquina.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta54()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio54" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">         ¿Cuál es la forma correcta de almacenar el resultado de una función con retorno? </h2>
+    <form id="formularioPregunta55" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta55" id="opcion55a" value="a">
+                <label class="form-check-label" for="opcion55a">a)    resultado <- nombreFuncion(par1, par2)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta55" id="opcion55b" value="b">
+                <label class="form-check-label" for="opcio55b">b)    resultado = nombreFuncion(par1, par2)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta55" id="opcion55c" value="c">
+                <label class="form-check-label" for="opcion55c">c)  ejecutar resultado=nombreFuncion(par1, par2)</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta55" id="opcion55d" value="d">
+                <label class="form-check-label" for="opcion55d">d)  retornar resultado=nombreFuncion(par1, par2)</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta55()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio55" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">          ¿Cuál es la diferencia principal entre un algoritmo iterativo y uno recursivo? </h2>
+    <form id="formularioPregunta56" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta56" id="opcion56a" value="a">
+                <label class="form-check-label" for="opcion56a">a)    Un algoritmo iterativo siempre es más eficiente que uno recursivo.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta56" id="opcion56b" value="b">
+                <label class="form-check-label" for="opcio56b">b)    Un algoritmo recursivo es más fácil de entender y programar que uno iterativo.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta56" id="opcion56c" value="c">
+                <label class="form-check-label" for="opcion56c">c)  Un algoritmo iterativo no puede resolver problemas complejos, mientras que uno
+                    recursivo sí.</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta56" id="opcion56d" value="d">
+                <label class="form-check-label" for="opcion56d">d)  Un algoritmo iterativo repite un bloque de código utilizando bucles, mientras que un
+                    algoritmo recursivo se llama a sí mismo para resolver subproblemas.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta56()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio56" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+  <div class="container mt-2">
+    <h2 class="text-center">  Seleccione una: </h2>
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function sumaPares(n) {
+            let suma = 0;
+            for (let i = 0; i <= n; i++) {
+                   if (i % 2 === 0) {
+                      suma += i;
+           }
+       }
+       return suma;
+       }
+       let resultado = sumaPares(6);
+       </pre>
+    <form id="formularioPregunta57" action="./simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta57" id="opcion57a" value="a">
+                <label class="form-check-label" for="opcion57a">a) 12</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta57" id="opcion57b" value="b">
+                <label class="form-check-label" for="opcion57b">b)  18</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta57" id="opcion57c" value="c">
+                <label class="form-check-label" for="opcion57c">c)  21</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta57" id="opcion57d" value="d">
+                <label class="form-check-label" for="opcion57d">d)  6</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta57()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio57" class="resultado ms-5 h4"></div>
+    </form>
+  </div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la diferencia principal entre el operador AND y el operador OR en una expresión condicional?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta58" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta58" id="opcion58a" value="a">
+        <label class="form-check-label" for="opcion58a">a) AND solo puede usarse con números, mientras que OR solo con cadenas </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta58" id="opcion58b" value="b">
+        <label class="form-check-label" for="opcion58b">b) AND devuelve verdadero solo si todas las condiciones son verdaderas, mientras que OR devuelve verdadero si al menos una condición es verdadera.</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta58" id="opcion58c" value="c">
+        <label class="form-check-label" for="opcion58c">c) AND evalúa solo una condición, mientras que OR evalúa todas.</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta58" id="opcion58d" value="d">
+        <label class="form-check-label" for="opcion58d">d) No hay ninguna diferencia, ambos operadores se comportan de la misma manera.</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta58()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio58" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se
+        le asigna como un porcentaje de su salario mensual que depende de su antigüedad en la
+        empresa de acuerdo con la sig. Tabla.</h2>
+<div class="text-center">
+</div>
+<div class="text-center">
+    <img src="../../img/ejercicio59.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+</div>
+<form id="formularioPregunta59" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta59" id="opcion59a" value="a">
+        <label class="form-check-label" for="opcion59a">a) 1B, 2C, 3A, 4D </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta59" id="opcion59b" value="b">
+        <label class="form-check-label" for="opcion59b">b) 1A, 2D, 3B, 4C </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta59" id="opcion59c" value="c">
+        <label class="form-check-label" for="opcion59c">c) 1B 2C, 3D 4A </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta59" id="opcion59d" value="d">
+        <label class="form-check-label" for="opcion59d">d) 1A, 2B, 3D, 4C</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta59()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio59" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">El siguiente algoritmo verifica si un número es Par o Impar</h2>
+<div class="text-center">
+</div>
+<div class="text-center">
+    <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+        function esPar(x){
+            1. let r = ""
+            2. if (x % 2 == 0) {
+            3. r = " Es Impar"
+            4.}else{
+            5. r = " Es Par"
+            }
+            6.console.log(r)
+            }</pre>
+   </div>
+   0<h4 class="text-center text-primary-emphasis">¿Cuál línea o líneas hafcen que el algoritmo no funcione de manera correcta?</h4>
+<form id="formularioPregunta60" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta60" id="opcion60a" value="a">
+        <label class="form-check-label" for="opcion60a">a) 5</div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta60" id="opcion60b" value="b">
+        <label class="form-check-label" for="opcion60b">b) 3</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta60" id="opcion560c" value="c">
+        <label class="form-check-label" for="opcion60c">c) 1</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta60" id="opcion60d" value="d">
+        <label class="form-check-label" for="opcion60d">d) 3,5</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta60()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio60" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice las siguientes líneas de programa y escriba ¿cuál es la respuesta que genera m?</h2>
+<div class="text-center">
+</div>
+<div class="text-center">
+    <img src="../../img/ejercicio 61.jpg" width="400" height="250" alt="Descripción de la imagen" class="my-3">
+</div>
+<form id="formularioPregunta61" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta61" id="opcion61a" value="a">
+        <label class="form-check-label" for="opcion61a">a) 3 </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta61" id="opcion61b" value="b">
+        <label class="form-check-label" for="opcion61b">b) 2 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta61" id="opcion61c" value="c">
+        <label class="form-check-label" for="opcion61c">c) 25 </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta61" id="opcion61d" value="d">
+        <label class="form-check-label" for="opcion61d">d) 1 </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta61()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio61" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Qué se entiende por una condición anidada en lógica de programación?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta62" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta62" id="opcion62a" value="a">
+        <label class="form-check-label" for="opcion62a">a) Es una técnica para reducir el número de condiciones en un programa.</div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta62" id="opcion62b" value="b">
+        <label class="form-check-label" for="opcion62b">b)  Es cuando una condición se repite varias veces dentro de un bucle</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta62" id="opcion62c" value="c">
+        <label class="form-check-label" for="opcion62c">c) Es una condición que contiene múltiples operadores lógicos en una sola línea </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta62" id="opcion62d" value="d">
+        <label class="form-check-label" for="opcion62d">d) Es cuando una condición condicional se encuentra dentro de otra condición condicional </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta62()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio62" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Si un viaje en tren cuesta $5 por persona y un grupo de 6 personas toma el tren, ¿cuál será
+        el costo total del viaje?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta63" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta63" id="opcion63a" value="a">
+        <label class="form-check-label" for="opcion63a">a) 30 dolares </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta63" id="opcion63b" value="b">
+        <label class="form-check-label" for="opcion63b">b) 35 dolares</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta63" id="opcion63c" value="c">
+        <label class="form-check-label" for="opcion63c">c) 30 dolares</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta63" id="opcion63d" value="d">
+        <label class="form-check-label" for="opcion63d">d) 40 dolares </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta63()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio63" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">En un diagrama de flujo, ¿qué figura geométrica se utiliza para representar una decisión o condición?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta64" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta64" id="opcion64a" value="a">
+        <label class="form-check-label" for="opcion64a">a) Rombo</div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta64" id="opcion64b" value="b">
+        <label class="form-check-label" for="opcion64b">b) triángulo </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta64" id="opcion64c" value="c">
+        <label class="form-check-label" for="opcion64c">c) cículo</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta64" id="opcion64d" value="d">
+        <label class="form-check-label" for="opcion64d">d) cuadrado </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta64()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio64" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">En el desarrollo de modelos abstractos, ¿cuál es el primer paso para resolver un problema?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta65" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta65" id="opcion65a" value="a">
+        <label class="form-check-label" for="opcion65a">a) Probar la solución en distintos escenarios.
+        </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta65" id="opcion65b" value="b">
+        <label class="form-check-label" for="opcion65b">b) Analizar y comprender el problema en profundidad</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta65" id="opcion65c" value="c">
+        <label class="form-check-label" for="opcion65c">c) Optimizar el código para rendimiento.        </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta65" id="opcion65d" value="d">
+        <label class="form-check-label" for="opcion65d">d) Implementar una solución directamente en código.</div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta65()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio65" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Qué sucede si intentamos devolver un valor en una función sin retorno?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta66" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta66" id="opcion66a" value="a">
+        <label class="form-check-label" for="opcion66a">a) Muestra un mensaje de error</div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta66" id="opcion66b" value="b">
+        <label class="form-check-label" for="opcion66b">b) Devuelve 0 automáticamente </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta66" id="opcion66c" value="c">
+        <label class="form-check-label" for="opcion66c">c) Devuelve NULL</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta66" id="opcion66d" value="d">
+        <label class="form-check-label" for="opcion66d">d) No sucede nada, pero no devuelve ningún valor. </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta66()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio66" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">¿Cuál es la forma correcta de definir una función que no devuelve un valor en PSeInt?</h2>
+<div class="text-center">
+</div>
+<form id="formularioPregunta67" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+<div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta67" id="opcion67a" value="a">
+        <label class="form-check-label" for="opcion67a">a)  funcion nombreFuncion(par1, par2)
+        </div> 
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta67" id="opcion67b" value="b">
+        <label class="form-check-label" for="opcion67b">b) proceso nombreFuncion(par1, par2)
+        </div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta67" id="opcion67c" value="c">
+        <label class="form-check-label" for="opcion67c">c) procedimiento nombreFuncion(par1, par2)</div>
+    <div class="form-check mb-1 d-flex align-items-center">
+        <input class="form-check-input me-2" type="radio" name="respuesta67" id="opcion67d" value="d">
+        <label class="form-check-label" for="opcion67d">d)  funcion sin retorno nombreFuncion(par1, par2) </div>
+    <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta67()">Aceptar</button>
+    <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+</div>
+<div id="resultadoEjercicio67" class="resultado ms-5 h4"></div>
+</form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center">Analice el codigo y responda el literal que encaje mejor con la imagen</h2>
+    <div class="text-center">
+        <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+            function contarHastaCinco() {
+                for (let i = 1; i <= 5; i++) {
+                console.log(i);
+                }
+                }
+                contarHastaCinco();</pre>
+      
+        <div class="text-center">
+        </div>
+    <div class="text-center"></div>
+    <form id="formularioPregunta68" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta68" id="opcion68a" value="a">
+                <label class="form-check-label" for="opcion68a">a)  1 2 3 4 5</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta68" id="opcion68b" value="b">
+                <label class="form-check-label" for="opcion68b">b) 0 1 2 3 4 5</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta68" id="opcion68c" value="c">
+                <label class="form-check-label" for="opcion68c">c) 1 2 3 4 5 6</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta68" id="opcion68d" value="d">
+                <label class="form-check-label" for="opcion68d">d) 1 2 3 4</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta68()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio68" class="resultado ms-5 h4"></div>
+    </form>
+</div>
+
+<div class="container mt-2">
+    <h2 class="text-center"> Analice el codigo y responda a que literal le corresponde la imagen</h2>
+    <div class="text-center">
+        <pre class="bg-primary-subtle p-1 border rounded text-primary-emphasis">
+            function SumaDivisores(num) {
+                let suma = 0;
+                for (let i = 1; i < num; i++) {
+                if (num % i === 0) {
+                suma += i;
+                }
+                }
+                return suma;
+                }
+                SumaDivisores(6);</pre>
+      
+        <div class="text-center">
+        </div>
+    <div class="text-center"></div>
+    <form id="formularioPregunta69" action=".simulador.html" class="d-flex align-items-center justify-content-center">
+        <div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta69" id="opcion69a" value="a">
+                <label class="form-check-label" for="opcion69a">a) 6</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta69" id="opcion69b" value="b">
+                <label class="form-check-label" for="opcion69b">b) 5</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta69" id="opcion69c" value="c">
+                <label class="form-check-label" for="opcion69c">c) 12</label>
+            </div>
+            <div class="form-check mb-1 d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="respuesta69" id="opcion69d" value="d">
+                <label class="form-check-label" for="opcion69d">d) 3</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificarRespuesta69()">Aceptar</button>
+            <button class="btn btn-danger text-white mt-3" type="submit">Regresar</button>
+        </div>
+        <div id="resultadoEjercicio69" class="resultado ms-5 h4"></div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="../../js/simulador.js"></script>
+</body>
+</html>
